@@ -1,6 +1,7 @@
 
 body {
 	background-color: #F7F6E4;
+	box-sizing: border-box;
 }
 
 .wrapper {
@@ -38,17 +39,21 @@ body {
 
 .para {
 	margin-top: 100px;
-	display: inline-block;
+
 }
 
 .image {
 	max-width: 100%;
 	margin-top: 100px;
+	display: flex;
+	flex: 1
 }
 
 .intro {
 	margin-top: 100px;
 	display: inline-block;
+	display: flex;
+	flex: 2
 }
 
 .social {
