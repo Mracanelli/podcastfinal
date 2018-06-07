@@ -1,9 +1,8 @@
 
 body {
-	background-color: #FBCBC1;
+	background-color: #fde0da;
 	box-sizing: border-box;
-	font-family: /*'Amatic SC', cursive;*/
-	/*'Oswald', sans-serif;*/
+	font-family: 'Noto Sans', sans-serif, 'Amatic SC', cursive;
 }
 
 a {
@@ -51,6 +50,11 @@ a {
 	color: #353648;
 	text-align: center;
 	font-size: 35px;
+	font-family: amatic sc;
+}
+
+.logo {
+	width: 100%;
 }
 
 .para {
@@ -59,12 +63,19 @@ a {
 
 .image {
 	max-width: 100%;
-	margin-top: 100px;
+	margin-top: 20px;
 }
 
 .intro {
-	margin-top: 100px;
+	margin-top: 20px;
 	display: inline-block;
+	font-size: 24px;
+}
+
+.signoff {
+	text-align: center;
+	font-style:italic;
+	font-size: 30px;
 }
 
 .social-btn {
@@ -72,13 +83,20 @@ a {
     border-radius: 50%;
     height: 45px;
     width: 45px;
-
 }
 
 .headshot {
-	width: 100%;
+	width: 65%;
 	border-radius: 50%;
 	max-width: 100%;
+}
+
+.meet {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: lighter;
+	color: #353648;
 }
 
 .bio {
@@ -88,15 +106,30 @@ a {
 
 .col.bios {
 	min-width: 50%;
+	margin-top: 20px;
+}
+
+.recording {
+	margin-top: 40px;
+}
+
+.description {
+	margin-top: 20px;
+}
+
+.beam {
+	text-align: right;
 }
 
 .menu {
   display: none;
+  position: relative;
 }
 
 .hamburger {
   display: inline-block;
   float: right;
+  z-index: 1;
 }
 
 .ham-line {
@@ -107,7 +140,7 @@ a {
 }
 
 ul.list.active {
-  transform: translate(70%);
+  transform: translate(0%, 0%);
 }
 
 .list {
@@ -116,6 +149,13 @@ ul.list.active {
   list-style-type: none;
   font-size: 18px;
   color: #353648;
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	z-index: -1;
 }
 
 nav {
@@ -138,6 +178,7 @@ nav {
 
 	  .menu {
 	    display: block;
+
 	  }
 	}
 }
