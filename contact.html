@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
@@ -17,19 +18,30 @@
 		</p>
 	</div>
 	<div class="row-2">
-		<p class="col col_design">
-			<a href="index.html">Home</a>
+		<p class="col">
+			<a href="index.html" class="button hover">Home</a>
 		</p>
-		<p class="col col_design">
-			<a href="about.html">About</a>
+		<p class="col">
+			<a href="about.html" class="button">About</a>
 		</p>
-		<p class="col col_design">
-			<a href="recordings.html">Recordings</a>
+		<p class="col">
+			<a href="recordings.html" class="button">Recordings</a>
 		</p>
-		<p class="col col_design">
-			<a href="contact.html">Contact</a>
+		<p class="col">
+			<a href="contact.html" class="button">Contact</a>
 		</p>
 	</div>	
+
+	<div>
+		<form id="form" method="POST" action="https://formspree.io/justbetweenuspodcast@gmail.com" id="form1">
+		  <input type="text" name="firstname" placeholder="First Name"><br>
+		  <input type="text" name="lastname" placeholder="Last Name"><br>
+		  <input type="email" name="email" placeholder="Your email"><br>
+		  <textarea name="message" placeholder="Whatcha wanna say?"></textarea><br>
+		  <button type="submit" id="submit">Send it</button>
+		</form>
+	</div>
+
 	<div class="row row_centered">
 		<h1 class="social-btn"><a href="https://www.instagram.com/andiewexler/">AW</a></h1>
 		<h1 class="social-btn"><a href="https://www.instagram.com/micaelamarie/">MR</a></h1>
