@@ -2,6 +2,10 @@ html body * {
   box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
   background-color: white/*#fde0da*/;
   box-sizing: border-box;
@@ -29,6 +33,7 @@ a {
 
 .row-2 {
   display: flex;
+  flex: 1
   flex-flow: row wrap;
   justify-content: space-between;
   position: fixed;
@@ -41,8 +46,15 @@ a {
   min-width: 110px;
 }
 
-.col-1 {
+.col-logo {
+  width: 150px;
+}
 
+.logo {
+  width: 100%;
+}
+
+.col-1 {
   padding-right: 5px;
   flex: 1;
   color: #fde0da;
@@ -74,10 +86,6 @@ h1 {
   color: #353648;
   font-size: 50px;
   text-align: center;
-}
-
-.logo {
-  width: 100%;
 }
 
 .parallax {
@@ -208,7 +216,8 @@ img.opacity:hover {
 .hamburger {
   display: inline-block;
   float: right;
-  z-index: 1;
+  z-index: 2;
+  position: relative;
 }
 
 .ham-line {
@@ -224,15 +233,28 @@ img.opacity:hover {
   text-align: center;
 }
 
+ul.list li {
+  opacity: 0;
+}
+
+ul.list.active li {
+  opacity: 1;
+  transition: 2s all ease-in-out 1.5s;
+}
+
 ul.list.active {
+  transition: 2s all ease-in-out 0.5s, 1s height ease-in-out;
   -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  height: 148px;
+  transform: translate(0%, 0%);
+  transition: 1s all ease, 0.5s height ease 1s;
 }
 
 .list {
-  transition: 1s all ease;
+  transition: 1s all ease 0.5s, 0.5s height ease;
   -webkit-transform: translate(100%, 0%);
-          transform: translate(100%, 0%);
+  transform: translate(100%, 0%);
   list-style-type: none;
   font-size: 18px;
   color: #353648;
@@ -241,12 +263,20 @@ ul.list.active {
   left: 0;
   width: 100%;
   padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
-  z-index: -1;
+  z-index: 1;
+  background: #E91E63;
+  overflow: hidden;
+  height: 5px;
 }
 
-nav {
+.nav {
   text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 }
 
 
@@ -339,6 +369,33 @@ textarea:hover {
   color: #e2dedb;
 }
 
+/* headshot hover effect */
+
+.headshot-wrapper {
+  position: relative;
+}
+
+.headshot-wrapper .flyin-text {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s top ease-in-out, 0.5s opacity cubic-bezier(1, 0, 0.64, 0.96);
+}
+
+.headshot-wrapper:hover .flyin-text {
+    top: 60%;
+    opacity: 1;
+}
+
+.mobile-text {
+  display: none;
+}
+
 @media screen and (max-width: 420px) {
   .row {
     flex-direction: column;
@@ -355,6 +412,16 @@ textarea:hover {
     .menu {
       display: block;
 
+    }
+
+    .flyin-text {
+      display: none;
+    }
+
+    .mobile-text {
+      display: inline-block;
+      color: black;
+      text-align: center;
     }
   }
 }
