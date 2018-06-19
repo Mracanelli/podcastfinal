@@ -8,28 +8,40 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
 </head>
 <body>
-<div class="wrapper">	
+<div class="wrapper">
 	<div class="row">
-		<p class="col col-3">
-			<img class="logo" src="">
-		</p>
+		<div class="col-logo">
+			<img class="logo" src="logo.png">
+		</div>
+		<div class="col">
+			<div class="nav">
+					<a href="index.html" class="button hover">Home</a>
+					<a href="about.html" class="button">About</a>
+					<a href="recordings.html" class="button">Recordings</a>
+					<a href="contact.html" class="button">Contact</a>
+			</div>
+		</div>
 	</div>
-	<div class="nav row-2">
-		<p class="col">
-			<a href="index.html" class="button hover">Home</a>
-		</p>
-		<p class="col">
-			<a href="about.html" class="button">About</a>
-		</p>
-		<p class="col">
-			<a href="recordings.html" class="button">Recordings</a>
-		</p>
-		<p class="col">
-			<a href="contact.html" class="button">Contact</a>
-		</p>
-	</div>
+
+	<div class="menu">
+    
+    <!-- hamburger   -->
+    <div class="hamburger">
+      <div class="ham-line"></div>
+      <div class="ham-line"></div>
+      <div class="ham-line"></div>
+
+    </div>
+    <ul class="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="recordings.html">Recordings</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <!--  ul of menu items  -->
+	
+  </div>
 	<div class="parallax3">
-		<h1 class="meet">MEET THE GANG</h1>
 	</div>	
 	<div class="row">
 		<div class="col bios">
@@ -115,5 +127,7 @@
 		<h1 class="social-btn"><a href="https://www.instagram.com/micaelamarie/">MR</a></h1>
 		<h1 class="social-btn"><a href="https://www.instagram.com/mirandajacoby/">MJ</a></h1>
 	</div>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>

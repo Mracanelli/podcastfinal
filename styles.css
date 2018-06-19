@@ -9,11 +9,12 @@ html, body {
 body {
   background-color: white/*#fde0da*/;
   box-sizing: border-box;
-  font-family: 'Oswald', sans-serif,'Raleway', sans-serif;
+  font-family: 'Oswald', sans-serif,'Raleway', sans-serif, 'Lobster', cursive;
 }
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .wrapper {
@@ -88,6 +89,10 @@ h1 {
   text-align: center;
 }
 
+.hi {
+  font-family: lobster;
+}
+
 .parallax {
 /*  padding-top: 20px;*/
   background-image: url("grouppic.jpg");
@@ -114,19 +119,34 @@ h1 {
   padding-top: 50px;
   text-align: center;
   color: white;
-  display: inline-block;
+  font-family: lobster;
+  font-weight: lighter;
 }
 
 .parallax2 {
-  background-image: url("group2.jpg");
+  background-color: #F5856D;
   background-size: cover;
   background-attachment: fixed;
-  height: 350px;
+  height: 235px;
 }
 
 .parallax3 {
-  background-image: url("group3.jpg");
-  background-size: cover;
+  background-image: url("HeadersAbout.jpg");
+/*  background-size: cover;*/
+  background-attachment: fixed;
+  height: 250px;
+  margin-top: 60px;
+}
+
+.parallax4 {
+  background-image: url("HeaderRecordings.jpg");
+  background-attachment: fixed;
+  height: 250px;
+  margin-top: 60px;
+}
+
+.parallax5 {
+  background-image: url("HeaderContact.jpg");
   background-attachment: fixed;
   height: 250px;
   margin-top: 60px;
@@ -138,7 +158,7 @@ h1 {
 
 .intro {
   display: inline-block;
-  font-size: 24px;
+  font-size: 18px;
   color: #353648;
   font-weight: lighter;
   font-family: raleway;
@@ -146,9 +166,11 @@ h1 {
 
 .signoff {
   text-align: center;
-  font-style:italic;
-  font-size: 30px;
+  font-size: 20px;
   color: #353648;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: lobster;
 }
 
 .social-btn {
@@ -175,11 +197,11 @@ img.opacity:hover {
   zoom: 1;
 }
 
-.meet {
+/*.meet {
   text-align: center;
   font-size: 40px;
   color: white;
-}
+}*/
 
 .bio {
     display: flex;
@@ -267,7 +289,7 @@ ul.list.active {
   padding-bottom: 20px;
   text-align: center;
   z-index: 1;
-  background: #E91E63;
+  background: #353648;
   overflow: hidden;
   height: 5px;
 }
@@ -293,7 +315,8 @@ footer{
 
 .form-div {
   display: flex;
-  margin-top: 60px;
+  margin-top: 100px;
+  justify-content: center;
 }
 
 input {
