@@ -29,7 +29,8 @@ a {
 }
 
 .row.row_centered {
-  justify-content: center;
+  justify-content: center space-between;
+
 }
 
 .row-2 {
@@ -45,6 +46,10 @@ a {
   padding-right: 5px;
   flex: 1;
   min-width: 110px;
+}
+
+.lobster {
+  font-family: Lobster;
 }
 
 .col-logo {
@@ -67,7 +72,7 @@ a {
 }
 
 .logo1 {
-  max-width: 210px;
+  max-width: 180px;
   /*position: relative;*/
   /*top: 0;
   left: 0;*/
@@ -76,7 +81,7 @@ a {
 }
 
 .logo1.intro {
-    transform: translate(104px,-16%);
+    transform: translate(40px,-8%);
     opacity: 1;
 }
 
@@ -86,13 +91,13 @@ a {
 }
 .logo2 {
   z-index: 0;
-  max-width: 200px;
+  max-width: 150px;
   transform: translate(-13px, 76%);
   transition: 0.5s opacity ease, 0.65s transform ease 0.2s;
 }
 
 .logo2.intro {
-    transform: translate(65px,-15%);
+    transform: translate(20px,-5%);
     opacity: 1;
 }
 
@@ -103,14 +108,14 @@ a {
 }
 
 .logo3 {
-  max-width: 305px;
+  max-width: 220px;
   z-index: 1;
   transform: translate(-17px, 39%);
   transition: 0.5s opacity ease, 0.78s transform ease 0.1s;
 }
 
 .logo3.intro {
-  transform: translate(7px, -12%);
+  transform: translate(-18px, -1%);
   opacity: 1;
 }
 
@@ -162,7 +167,7 @@ h1 {
 /*  padding-top: 20px;*/
   background-image: url("grouppic.jpg");
   background-size: cover;
-  background-position: left 60px top 160px;
+  background-position: left 60px top 170px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 350px;
@@ -170,15 +175,11 @@ h1 {
   top: 50%;
   right: 15px;
   padding: 0 10px 0 0;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .page-desc {
-  font-size: 40px;
-  padding-top: 50px;
-  text-align: left;
-  color: white;
-  display: inline-block;
+  display: none;
 }
 
 .page-desc2 {
@@ -200,7 +201,7 @@ h1 {
 .parallax3 {
   background-image: url("HeadersAbout.jpg");
   background-attachment: fixed;
-  background-position: center top 75px;
+  background-position: center top 100px;
   height: 250px;
   margin-top: 60px;
 }
@@ -208,7 +209,7 @@ h1 {
 .parallax4 {
   background-image: url("HeaderRecordings.jpg");
   background-attachment: fixed;
-  background-position: center top 75px;
+  background-position: center top 100px;
   height: 250px;
   margin-top: 60px;
 }
@@ -216,7 +217,7 @@ h1 {
 .parallax5 {
   background-image: url("HeaderContact.jpg");
   background-attachment: fixed;
-  background-position: center top 75px;
+  background-position: center top 100px;
   height: 250px;
   margin-top: 60px;
 }
@@ -250,8 +251,18 @@ h1 {
 }
 
 .andiecontact {
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height: 100px;
+}
+
+.micaelacontact {
+  width: 80px;
+  height: 100px;
+}
+
+.mirandacontact {
+  width: 90px;
+  height: 100px;
 }
 
 .headshot {
@@ -270,12 +281,6 @@ img.opacity:hover {
   filter: alpha(opacity=50);
   zoom: 1;
 }
-
-/*.meet {
-  text-align: center;
-  font-size: 40px;
-  color: white;
-}*/
 
 .bio {
     display: flex;
@@ -389,7 +394,8 @@ footer{
 
 .form-div {
   display: flex;
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 40px;
   justify-content: center;
 }
 
@@ -505,18 +511,6 @@ textarea:hover {
   }
 }
 
-/*@keyframes move-right {
-  0% {
-    opacity: 0%;
-    transform: translate(5%, -30%); 
-  }
-  
-  100% {
-    opacity: 100%;
-    transform: translate(0%, 10%);  
-  }
-}*/
-
 @media screen and (max-width: 420px) {
   .row {
     flex-direction: column;
@@ -544,5 +538,35 @@ textarea:hover {
       color: black;
       text-align: center;
     }
+
+    .lobster {
+      opacity: 0;
+    }
+
+    .parallax,
+    .parallax3,
+    .parallax4,
+    .parallax5 {
+      background: none;
+      height: auto;
   }
-}
+
+    .page-desc{
+      display: inline-block;
+      max-width:100%;
+    }
+
+    .page-desc2 {
+      font-size: 35px;
+    }
+
+    input,
+    textarea {
+     width: 300px;
+    }
+
+    #submit {
+      width: 300px;
+      margin-bottom: 20px;
+    }
+  }
