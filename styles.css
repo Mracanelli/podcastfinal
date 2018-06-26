@@ -1,3 +1,5 @@
+/*Generals*/
+
 html body * {
   box-sizing: border-box;
 }
@@ -61,6 +63,8 @@ a {
   position: relative;
 }
 
+/*css for the animation of the logo*/
+
 .logo1, 
 .logo2,
 .logo3 {
@@ -71,24 +75,25 @@ a {
   transition: 0.5s opacity ease, 0.75s transform ease;
 }
 
+/*andie position before entering*/
 .logo1 {
   max-width: 180px;
-  /*position: relative;*/
-  /*top: 0;
-  left: 0;*/
   z-index: 2;
   transform: translate(104px, 66%);
 }
 
+/*andie position once arrived*/
 .logo1.intro {
     transform: translate(40px,-8%);
     opacity: 1;
 }
 
+/*andie transition*/
 .logo1.active {
    animation: 2s move-top ease-in 0s 1;
-   /*transform: translate(0%,-75%);*/
 }
+
+/*micaela position before entering*/
 .logo2 {
   z-index: 0;
   max-width: 150px;
@@ -96,17 +101,19 @@ a {
   transition: 0.5s opacity ease, 0.65s transform ease 0.2s;
 }
 
+/*micaela position once arrived*/
 .logo2.intro {
     transform: translate(20px,-5%);
     opacity: 1;
 }
 
+/*micaela transition*/
 .logo2.active {
   animation: 2s move-top ease-in 0s 1;
-  /*transform: translate(0%,-75%);*/
-  /*transition-delay: 0.5s;*/
+
 }
 
+/*miranda position before entering*/
 .logo3 {
   max-width: 220px;
   z-index: 1;
@@ -114,11 +121,13 @@ a {
   transition: 0.5s opacity ease, 0.78s transform ease 0.1s;
 }
 
+/*miranda position once arrived*/
 .logo3.intro {
   transform: translate(-18px, -1%);
   opacity: 1;
 }
 
+/*miranda transition*/
 .logo3.active {
    animation: 2.5s move-top ease 0.5s 1;
    /*transform: translate(0%,-75%);
@@ -159,12 +168,14 @@ h1 {
   text-align: center;
 }
 
+/*Home Page*/
+
 .hi {
   font-family: lobster;
 }
 
+
 .parallax {
-/*  padding-top: 20px;*/
   background-image: url("grouppic.jpg");
   background-size: cover;
   background-position: left 60px top 170px;
@@ -243,11 +254,17 @@ h1 {
   font-family: lobster;
 }
 
+.quotation {
+  color: #353648;
+  font-size: 35px;
+  text-align: center;
+}
+
 .social-btn {
   background-color: #F5856D;
-    border-radius: 50%;
-    height: 45px;
-    width: 45px;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
 }
 
 .andiecontact {
@@ -264,6 +281,8 @@ h1 {
   width: 90px;
   height: 100px;
 }
+
+/*About Page*/
 
 .headshot {
   max-width: 100%;
@@ -297,87 +316,39 @@ img.opacity:hover {
   font-size: 20px;
 }
 
+/* headshot hover effect */
+
+.headshot-wrapper {
+  position: relative;
+}
+
+.headshot-wrapper .flyin-text {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s top ease-in-out, 0.5s opacity cubic-bezier(1, 0, 0.64, 0.96);
+}
+
+.headshot-wrapper:hover .flyin-text {
+    top: 60%;
+    opacity: 1;
+}
+
+.mobile-text {
+  display: none;
+}
+
 .recording {
   margin-top: 60px;
 }
 
 .description {
   margin-top: 20px;
-}
-
-.beam {
-  text-align: right;
-}
-
-.menu {
-  display: none;
-  position: relative;
-}
-
-.hamburger {
-  display: inline-block;
-  float: right;
-  z-index: 2;
-  position: relative;
-}
-
-.ham-line {
-  width: 35px;
-  height: 5px;
-  background-color: #353648;
-  margin: 6px 0;
-}
-
-.quotation {
-  color: #353648;
-  font-size: 35px;
-  text-align: center;
-}
-
-ul.list li {
-  opacity: 0;
-}
-
-ul.list.active li {
-  opacity: 1;
-  transition: 2s all ease-in-out 1.5s;
-}
-
-ul.list.active {
-  transition: 2s all ease-in-out 0.5s, 1s height ease-in-out;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
-  height: 148px;
-  transform: translate(0%, 0%);
-  transition: 1s all ease, 0.5s height ease 1s;
-}
-
-.list {
-  transition: 1s all ease 0.5s, 0.5s height ease;
-  -webkit-transform: translate(100%, 0%);
-  transform: translate(100%, 0%);
-  list-style-type: none;
-  font-size: 18px;
-  color: #353648;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-  z-index: 1;
-  background: #353648;
-  overflow: hidden;
-  height: 5px;
-}
-
-.nav {
-  text-align: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
 }
 
 
@@ -391,6 +362,8 @@ footer{
   font-size: 1em;
   font-style: italic;
 }
+
+/*Contact page/form style*/
 
 .form-div {
   display: flex;
@@ -472,31 +445,75 @@ textarea:hover {
   color: #e2dedb;
 }
 
-/* headshot hover effect */
+/*Navigation/Hambuger*/
 
-.headshot-wrapper {
+.beam {
+  text-align: right;
+}
+
+.menu {
+  display: none;
   position: relative;
 }
 
-.headshot-wrapper .flyin-text {
-    font-size: 30px;
-    color: white;
-    position: absolute;
-    top: 0;
-    text-align: center;
-    width: 100%;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s top ease-in-out, 0.5s opacity cubic-bezier(1, 0, 0.64, 0.96);
+.hamburger {
+  display: inline-block;
+  float: right;
+  z-index: 2;
+  position: relative;
 }
 
-.headshot-wrapper:hover .flyin-text {
-    top: 60%;
-    opacity: 1;
+.ham-line {
+  width: 35px;
+  height: 5px;
+  background-color: #353648;
+  margin: 6px 0;
 }
 
-.mobile-text {
-  display: none;
+ul.list li {
+  opacity: 0;
+}
+
+ul.list.active li {
+  opacity: 1;
+  transition: 2s all ease-in-out 1.5s;
+}
+
+ul.list.active {
+  transition: 2s all ease-in-out 0.5s, 1s height ease-in-out;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  height: 148px;
+  transform: translate(0%, 0%);
+  transition: 1s all ease, 0.5s height ease 1s;
+}
+
+.list {
+  transition: 1s all ease 0.5s, 0.5s height ease;
+  -webkit-transform: translate(100%, 0%);
+  transform: translate(100%, 0%);
+  list-style-type: none;
+  font-size: 18px;
+  color: #353648;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  z-index: 1;
+  background: #353648;
+  overflow: hidden;
+  height: 5px;
+}
+
+.nav {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 }
 
 @keyframes move-up {
@@ -528,6 +545,8 @@ textarea:hover {
       display: block;
 
     }
+
+    /*hover text for desktop to mobile*/
 
     .flyin-text {
       display: none;

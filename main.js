@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+// hamburger menu for mobile viewing
 
 	var hm = document.querySelector('.hamburger');
 
@@ -11,6 +12,8 @@ $(document).ready(function() {
 	    list.classList.add('active');
 	  }
 	});
+
+	// beginning of code for animation on nav hovers
 
 	var andie = document.querySelector('.logo1');
 	var micaela = document.querySelector('.logo2');
